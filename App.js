@@ -1,24 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// @flow
+import React, {Component}  from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import Header from './src/components/Header';
+import MyStatusBar from './src/components/MyStatusBar';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-	<Text>This is my first change.</Text>
+      <View>
+        <MyStatusBar />
+        <Header headerText={'First Reaction'} />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  appContainer: {
+    paddingTop: 20
+  }
 });
